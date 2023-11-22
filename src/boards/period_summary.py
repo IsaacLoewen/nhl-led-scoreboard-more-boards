@@ -22,6 +22,10 @@ class PeriodSummary:
         self.team_colors = data.config.team_colors
         self.overview = nhl_api.overview(2022021212)  # Change this to your desired game ID
         #self.data.pref_games[0].game_id
+        for i in range(len(self.data.pref_games)):
+            print(self.data.pref_games[i].game_id)
+            print(self.data.pref_games[i].status_abstract_state)
+            
 
         self.period_instance = Periods(self.overview)
         self.display = "Final" if self.overview.linescore["currentPeriodTimeRemaining"] == "Final" else self.period_instance.ordinal

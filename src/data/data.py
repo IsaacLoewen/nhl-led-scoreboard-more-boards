@@ -207,6 +207,12 @@ class Data:
         
         if self.config.time_on_ice_leaders:
             self.time_on_ice_leaders = nhl_api.data.get_time_on_ice_leaders(self.isPlayoff)
+            
+        if self.config.rookie_point_leaders:    
+            self.rookie_point_leaders = nhl_api.data.get_rookie_point_leaders(self.isPlayoff)
+        if self.config.rookie_goal_leaders:    
+            self.rookie_goal_leaders = nhl_api.data.get_rookie_goal_leaders(self.isPlayoff)
+            # print(self.rookie_goal_leaders)
 
 
     #

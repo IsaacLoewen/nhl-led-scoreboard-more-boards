@@ -98,3 +98,11 @@ class Leaders:
         if self.data.config.time_on_ice_leaders:
             self.draw_leaderboard("TOI leaders", self.data.time_on_ice_leaders.get('data'), 'timeOnIcePerGame',
                                   (251, 133, 0), (0, 0, 0))
+            
+        if self.data.config.rookie_point_leaders:    
+            self.draw_leaderboard("rookie points", self.data.rookie_point_leaders.get('data'), 'points',
+                                  (251, 133, 0), (0, 0, 0))
+            
+        if self.data.config.rookie_goal_leaders:    
+            self.draw_leaderboard("rookie goals", self.data.rookie_goal_leaders.get('data'), 'goals',
+                                  (251, 133, 0), (0, 0, 0))
